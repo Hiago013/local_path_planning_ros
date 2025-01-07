@@ -1,0 +1,47 @@
+q_learning:
+  learning_rate: 0.1
+  discount_factor: 0.99
+  exploration_rate: 1.0
+  exploration_decay: 0.995
+  min_exploration_rate: 0.01
+  episodes: 1000
+  max_steps_per_episode: 100
+  reward_step: -1
+  reward_turn: 1
+  reward_goal: 100
+
+environment:
+  width: 10 # width of the map in meters
+  height: 10 # height of the map in meters
+  cell_size: 0.5 # size of each cell in meters
+  start: [0, 0] # start position of the agent
+  goal: [9, 9] # goal position of the agent
+  grid_T_map: # homogenous matrix to transform from map frame to grid frame
+    [-1, 0, 10,
+     0, -1, 10,
+     0, 0, 1]
+
+  obstacles: # list of static obstacles obstacles
+    - [1, 1]
+    - [2, 1]
+    - [3, 1]
+    - [3, 2]
+    - [3, 3]
+    - [3, 4]
+    - [3, 5]
+    - [3, 6]
+    - [3, 7]
+    - [3, 8]
+    - [5, 5]
+    - [5, 6]
+    - [5, 7]
+    - [5, 8]
+    - [5, 9]
+    - [6, 5]
+    - [7, 5]
+    - [8, 5]
+    - [9, 5]
+    - [9, 6]
+    - [9, 7]
+    - [9, 8]
+    - [9, 9]
